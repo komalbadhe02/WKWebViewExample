@@ -12,6 +12,10 @@
 		24B340BF21D79BD400A2340C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B340BD21D79BD400A2340C /* Main.storyboard */; };
 		24B340C121D79BDB00A2340C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24B340C021D79BDB00A2340C /* Assets.xcassets */; };
 		24B340C421D79BDB00A2340C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24B340C221D79BDB00A2340C /* LaunchScreen.storyboard */; };
+		24B340CD21D79FDD00A2340C /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B340CC21D79FDD00A2340C /* CommonUtils.swift */; };
+		24B340CF21D79FF400A2340C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B340CE21D79FF400A2340C /* Constants.swift */; };
+		24B340D121D7A00500A2340C /* SoapClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B340D021D7A00500A2340C /* SoapClient.swift */; };
+		24B340D321D7A01C00A2340C /* WebpageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B340D221D7A01C00A2340C /* WebpageHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		24B340C021D79BDB00A2340C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24B340C321D79BDB00A2340C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24B340C521D79BDB00A2340C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24B340CC21D79FDD00A2340C /* CommonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
+		24B340CE21D79FF400A2340C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		24B340D021D7A00500A2340C /* SoapClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoapClient.swift; sourceTree = "<group>"; };
+		24B340D221D7A01C00A2340C /* WebpageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebpageHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 		24B340B821D79BD400A2340C /* WKWebView */ = {
 			isa = PBXGroup;
 			children = (
+				24B340CB21D79F9C00A2340C /* Helpers */,
 				24B340B921D79BD400A2340C /* AppDelegate.swift */,
 				24B340BB21D79BD400A2340C /* ViewController.swift */,
 				24B340BD21D79BD400A2340C /* Main.storyboard */,
@@ -62,6 +71,17 @@
 				24B340C521D79BDB00A2340C /* Info.plist */,
 			);
 			path = WKWebView;
+			sourceTree = "<group>";
+		};
+		24B340CB21D79F9C00A2340C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				24B340CC21D79FDD00A2340C /* CommonUtils.swift */,
+				24B340CE21D79FF400A2340C /* Constants.swift */,
+				24B340D021D7A00500A2340C /* SoapClient.swift */,
+				24B340D221D7A01C00A2340C /* WebpageHandler.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +156,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				24B340BC21D79BD400A2340C /* ViewController.swift in Sources */,
+				24B340D121D7A00500A2340C /* SoapClient.swift in Sources */,
+				24B340CD21D79FDD00A2340C /* CommonUtils.swift in Sources */,
 				24B340BA21D79BD400A2340C /* AppDelegate.swift in Sources */,
+				24B340D321D7A01C00A2340C /* WebpageHandler.swift in Sources */,
+				24B340CF21D79FF400A2340C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
