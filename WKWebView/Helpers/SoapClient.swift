@@ -42,7 +42,7 @@ class SoapClient:NSObject,XMLParserDelegate{
             + "</soap:Body>\n"
             + "</soap:Envelope>\n";
         
-        let urlString = "https://apps.ubitech.in/dda777/Mobile_update?wsdl"
+        let urlString = "mobileupdate?wsdl"
         
         let url = URL(string: urlString)
         

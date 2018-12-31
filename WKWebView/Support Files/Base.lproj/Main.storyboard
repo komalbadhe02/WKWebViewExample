@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t2H-oQ-S5Q">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Webview-->
+        <scene sceneID="iza-W7-vzj">
+            <objects>
+                <viewController storyboardIdentifier="homeVCID" id="t2H-oQ-S5Q" customClass="VCWKWebview" customModule="WKWebView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jPx-jd-UsG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" allowsLinkPreview="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmx-bz-HwD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <dataDetectorTypes key="dataDetectorTypes" none="YES"/>
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="pSv-eW-PhA">
+                                <rect key="frame" x="167.5" y="313.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8hO-rz-5KB"/>
+                                    <constraint firstAttribute="width" constant="40" id="oKG-1x-H6C"/>
+                                </constraints>
+                                <color key="color" red="0.1803921568627451" green="0.54509803921568623" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F8R-ow-hup">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="F8R-ow-hup" secondAttribute="bottom" id="Bl7-KJ-xtj"/>
+                            <constraint firstItem="zmx-bz-HwD" firstAttribute="leading" secondItem="Ui2-to-CH3" secondAttribute="leading" id="Fpf-Vb-CYB"/>
+                            <constraint firstItem="Ui2-to-CH3" firstAttribute="trailing" secondItem="zmx-bz-HwD" secondAttribute="trailing" id="Ful-dn-7ll"/>
+                            <constraint firstItem="pSv-eW-PhA" firstAttribute="centerX" secondItem="jPx-jd-UsG" secondAttribute="centerX" id="KUz-XI-Dkf"/>
+                            <constraint firstAttribute="bottom" secondItem="zmx-bz-HwD" secondAttribute="bottom" id="MEh-DH-3db"/>
+                            <constraint firstItem="F8R-ow-hup" firstAttribute="leading" secondItem="Ui2-to-CH3" secondAttribute="leading" id="jwB-R7-Nmu"/>
+                            <constraint firstItem="Ui2-to-CH3" firstAttribute="trailing" secondItem="F8R-ow-hup" secondAttribute="trailing" id="p8Y-zD-11G"/>
+                            <constraint firstItem="F8R-ow-hup" firstAttribute="top" secondItem="jPx-jd-UsG" secondAttribute="top" id="qGw-sg-bJg"/>
+                            <constraint firstItem="pSv-eW-PhA" firstAttribute="centerY" secondItem="jPx-jd-UsG" secondAttribute="centerY" id="rWc-A4-Wah"/>
+                            <constraint firstItem="zmx-bz-HwD" firstAttribute="top" secondItem="jPx-jd-UsG" secondAttribute="top" id="te0-Ya-KDn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ui2-to-CH3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ixh-aM-eVC"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="noInternetConnectionView" destination="8dD-gt-J1y" id="g3V-pK-YE6"/>
+                        <outlet property="progressBar" destination="pSv-eW-PhA" id="Mex-DE-aBj"/>
+                        <outlet property="splashScreen" destination="F8R-ow-hup" id="Rqw-FQ-lNd"/>
+                        <outlet property="webView" destination="zmx-bz-HwD" id="K6t-iT-IXc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Ne-TN-T5A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="8dD-gt-J1y">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noInternetConnection" translatesAutoresizingMaskIntoConstraints="NO" id="xye-ft-l7P">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaS-JC-Dwz">
+                            <rect key="frame" x="0.0" y="145" width="375" height="55"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="8BT-Fo-UcH"/>
+                            </constraints>
+                            <state key="normal" image="Try-Again"/>
+                            <connections>
+                                <action selector="tryAgainButton:" destination="t2H-oQ-S5Q" eventType="touchUpInside" id="7ne-mn-fmc"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="qCD-VX-Nak" firstAttribute="trailing" secondItem="jaS-JC-Dwz" secondAttribute="trailing" id="3uZ-MN-58T"/>
+                        <constraint firstItem="xye-ft-l7P" firstAttribute="trailing" secondItem="qCD-VX-Nak" secondAttribute="trailing" id="Gme-cK-Dvr"/>
+                        <constraint firstItem="xye-ft-l7P" firstAttribute="leading" secondItem="qCD-VX-Nak" secondAttribute="leading" id="VyC-Ch-qC7"/>
+                        <constraint firstItem="jaS-JC-Dwz" firstAttribute="leading" secondItem="qCD-VX-Nak" secondAttribute="leading" id="g1j-h1-ukQ"/>
+                        <constraint firstItem="xye-ft-l7P" firstAttribute="bottom" secondItem="qCD-VX-Nak" secondAttribute="bottom" id="h2q-wb-ivX"/>
+                        <constraint firstItem="xye-ft-l7P" firstAttribute="top" secondItem="qCD-VX-Nak" secondAttribute="top" id="kkW-OJ-4J7"/>
+                        <constraint firstItem="qCD-VX-Nak" firstAttribute="bottom" secondItem="jaS-JC-Dwz" secondAttribute="bottom" id="rAO-9a-IkN"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="qCD-VX-Nak"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="839.20000000000005" y="-385.45727136431788"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Try-Again" width="720" height="102"/>
+        <image name="noInternetConnection" width="720" height="1200"/>
+    </resources>
+</document>
